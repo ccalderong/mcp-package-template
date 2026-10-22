@@ -7,7 +7,7 @@ this module is a convenience overlay.
 
 Usage::
 
-    from mcp_server.skills.registry import list_skills
+    from skills.registry import list_skills
     for skill in list_skills():
         print(skill["name"], skill["description"])
 """
@@ -15,7 +15,7 @@ Usage::
 import logging
 from pathlib import Path
 
-from mcp_server.skills.loader import _parse_frontmatter
+from mcp_server.prompts import _parse_frontmatter
 
 logger = logging.getLogger(__name__)
 

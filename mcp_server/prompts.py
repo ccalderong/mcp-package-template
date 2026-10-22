@@ -1,6 +1,6 @@
 """Skill loader — auto-discover skills and register them as MCP prompts.
 
-Reads every ``mcp_server/skills/*.md`` file (or ``skills/<name>/SKILL.md``
+Reads every ``skills/*.md`` file (or ``skills/<name>/SKILL.md``
 in nested layout), parses its YAML frontmatter, and registers it as an
 MCP prompt so any remote client can discover guided workflows.
 
@@ -11,12 +11,12 @@ Supported layouts
 -----------------
 Flat::
 
-    mcp_server/skills/
+    skills/
         my_skill.md          # frontmatter + body
 
 Nested::
 
-    mcp_server/skills/
+    skills/
         my_skill/
             SKILL.md         # frontmatter + body
             references/
@@ -31,7 +31,7 @@ from fastmcp import FastMCP
 
 logger = logging.getLogger(__name__)
 
-SKILLS_DIR = Path(__file__).resolve().parent
+SKILLS_DIR = Path(__file__).resolve().parent.parent / "skills"
 
 # ---------------------------------------------------------------------------
 # YAML frontmatter parser (minimal — avoids pyyaml dependency)
