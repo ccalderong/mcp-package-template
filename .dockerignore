@@ -1,0 +1,46 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Git
+.git/
+.gitignore
+.github/
+
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Development / test files
+tests/
+docs/
+scripts/
+data/
+.claude/
+
+# IDE / cache
+.vscode/
+.idea/
+.pytest_cache/
+
+# Docker meta (avoid recursive context)
+docker-compose*.yml
+Dockerfile
+
+# Docs at the root (not needed in the image). Root-level only: skills/*/SKILL.md
+# and resources/*.md are still copied.
+*.md
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+nul
