@@ -13,7 +13,7 @@ Create a guided workflow skill that orchestrates multiple tools.
 
 ### 1. Create a Skill File
 
-Create `mcp_server/skills/weather_report.md`:
+Create `skills/weather-report/SKILL.md`:
 
 ```markdown
 ---
@@ -77,7 +77,7 @@ Combine findings into a report:
 For skills that need supplementary context:
 
 ```
-mcp_server/skills/
+skills/
     weather_report/
         SKILL.md           # The skill definition above
         references/

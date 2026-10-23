@@ -22,7 +22,7 @@ The key insight: the skill body is a **prompt** sent to the AI assistant.  The a
 ### Flat Layout
 
 ```
-mcp_server/skills/
+skills/
     my_workflow.md
     another_workflow.md
 ```
@@ -30,7 +30,7 @@ mcp_server/skills/
 ### Nested Layout (with references)
 
 ```
-mcp_server/skills/
+skills/
     my_workflow/
         SKILL.md              # Main skill definition
         references/
@@ -76,7 +76,7 @@ What this workflow accomplishes.
 
 ## Adding a New Skill
 
-1. Create the markdown file in `mcp_server/skills/`.
+1. Create `skills/<name>/SKILL.md` (or a flat `skills/<name>.md`).
 2. Add YAML frontmatter with `name` and `description`.
 3. Write step-by-step instructions referencing existing tools.
 4. Restart the server.
@@ -95,7 +95,7 @@ What this workflow accomplishes.
 The `registry.py` module provides programmatic access to skill metadata:
 
 ```python
-from mcp_server.skills.registry import list_skills
+from skills.registry import list_skills
 
 for skill in list_skills():
     print(f"{skill['name']}: {skill['description']}")
